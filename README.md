@@ -554,14 +554,49 @@ author:
 
 ### Colors & Styling
 
-Edit `_sass/main.scss` to change colors:
+---
 
-```scss
-$primary-color: #333;      /* Text color */
-$accent-color: #007bff;    /* Link color */
-$bg-color: #f0f2f5;        /* Background color */
-$card-bg: #ffffff;         /* Card background */
+## 🎨 Quick Theme Tips
+
+### Change Theme
+Edit `_layouts/default.html` and update this line:
+```html
+<link rel="stylesheet" href="{{ '/assets/themes/dark.css' | relative_url }}">
 ```
+→ Swap `dark.css` for `default.css`, `ocean.css`, or your own.
+
+### Create a Custom Theme
+1. Create `assets/themes/your-theme.css`
+2. Add your colors:
+   ```css
+   :root {
+     --bg-color: #yourbg;
+     --card-bg: #yourcard;
+     --text-color: #yourtext;
+     --accent-color: #youraccent;
+   }
+   body { background: var(--bg-color); color: var(--text-color); }
+   ```
+3. Link it in `default.html` and rebuild.
+
+### Key Variables
+| Variable | Controls |
+|----------|----------|
+| `--bg-color` | Page background |
+| `--card-bg` | Post/card background |
+| `--text-color` | Main text |
+| `--accent-color` | Links & buttons |
+
+### Troubleshooting
+- **Theme not changing?** → Hard rebuild: `rmdir /s /q _site && bundle exec jekyll build`
+- **Cards transparent?** → Ensure inline styles use `var(--card-bg) !important`
+- **Colors not applying?** → Check `_sass/main.scss` uses `var(--...)`, not hardcoded hex
+
+---
+
+*💡 Pro Tip: Duplicate `ocean.css` as a starting point for your own theme!*
+
+---
 
 ### Timezone
 
