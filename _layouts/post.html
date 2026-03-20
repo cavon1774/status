@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article class="status-card single-post">
+    <div class="status-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%B %d, %Y • %I:%M %p" }}
+        </time>
+    </div>
+
+    <div class="status-content">
+        {% if page.title %}
+            <h2 class="status-title">{{ page.title }}</h2>
+        {% endif %}
+        {{ content }}
+    </div>
+
+    <div class="status-actions">
+        <!-- Facebook Share -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" class="share-btn">
+            <i class="fab fa-facebook-f"></i> Share
+        </a>
+        
+        <!-- Pinterest Share -->
+        <a href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ page.url }}&description={{ page.title | default: site.title }}" target="_blank" class="share-btn">
+            <i class="fab fa-pinterest"></i> Pin
+        </a>
+
+        <!-- Copy Link -->
+        <button onclick="navigator.clipboard.writeText('{{ site.url }}{{ page.url }}'); alert('Link copied!')" class="share-btn">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+    
+    <!-- Back to Feed Link -->
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="{{ '/' | relative_url }}" class="share-btn" style="display: inline-flex;">
+            <i class="fas fa-arrow-left"></i> Back to Feed
+        </a>
+    </div>
+</article>

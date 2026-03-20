@@ -1,0 +1,20 @@
+title: "My Status Wall"
+description: "Quick updates and snippets."
+baseurl: "" 
+url: "https://status.darbooks.com"
+
+# OLD (creates folders):
+# permalink: /:year-:month-:day-:title/
+
+# NEW (creates flat files):
+permalink: /:title.html
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Variables for your profile
+author:
+  name: "DA Rasmussen"
+  bio: "Posting book and status updates."
+  avatar: "/assets/avatar.jpg"
