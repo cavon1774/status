@@ -1,16 +1,8 @@
-/* ============ Variables ============ */
-$primary-color: #333;
-$accent-color: #007bff;
-$bg-color: #f0f2f5;
-$card-bg: #ffffff;
-$text-color: #1c1e21;
-$meta-color: #65676b;
-
 /* ============ Base Styles ============ */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: $bg-color;
-    color: $text-color;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     line-height: 1.6;
 }
@@ -55,10 +47,10 @@ body {
 /* ============ Profile Header ============ */
 .profile-header {
     text-align: center;
-    background: $card-bg;
+    background: var(--card-bg);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     margin-bottom: 20px;
 
     .avatar img {
@@ -66,7 +58,7 @@ body {
         height: 120px;
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid $bg-color;
+        border: 3px solid var(--bg-color);
     }
 
     h1 { 
@@ -75,12 +67,12 @@ body {
     }
     
     .bio { 
-        color: $meta-color; 
+        color: var(--meta-color); 
         margin-bottom: 15px; 
     }
     
     .social-links a {
-        color: $accent-color;
+        color: var(--accent-color);
         margin: 0 10px;
         font-size: 1.2rem;
         text-decoration: none;
@@ -89,9 +81,9 @@ body {
 
 /* ============ Status Cards ============ */
 .status-card {
-    background: $card-bg;
+    background: var(--card-bg);
     border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     padding: 20px;
     margin-bottom: 20px;
     opacity: 0;
@@ -100,7 +92,7 @@ body {
     
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--shadow-hover);
     }
 }
 
@@ -132,9 +124,9 @@ body {
     display: flex;
     align-items: center;
     font-size: 0.85rem;
-    color: $meta-color;
+    color: var(--meta-color);
     margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
 }
 
@@ -151,7 +143,7 @@ body {
 .mood-text {
     margin-left: 8px;
     font-style: italic;
-    color: $meta-color;
+    color: var(--meta-color);
     font-size: 0.85rem;
     
     &::before {
@@ -168,6 +160,7 @@ body {
 /* ============ Status Content & Images ============ */
 .status-content {
     margin-bottom: 20px;
+    color: var(--text-color);
     
     img { 
         max-width: 100%; 
@@ -193,26 +186,26 @@ article.status-card.single-post .status-content img {
 .status-actions {
     display: flex;
     gap: 10px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--border-color);
     padding-top: 15px;
 }
 
 .share-btn {
     background: none;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 0.8rem;
-    color: $meta-color;
+    color: var(--meta-color);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 5px;
     
     &:hover {
-        background-color: #f0f2f5;
-        color: $accent-color;
+        background-color: var(--bg-color);
+        color: var(--accent-color);
     }
 }
 
@@ -220,23 +213,23 @@ article.status-card.single-post .status-content img {
 footer {
     text-align: center;
     font-size: 0.8rem;
-    color: $meta-color;
+    color: var(--meta-color);
     margin-top: 40px;
 }
 
 /* ============ Left Sidebar - Featured Images ============ */
 .sidebar-left {
     .featured-image-card {
-        background: $card-bg;
+        background: var(--card-bg);
         border-radius: 8px;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        box-shadow: var(--shadow);
         margin-bottom: 20px;
         overflow: hidden;
         transition: transform 0.2s, box-shadow 0.2s;
         
         &:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-hover);
         }
         
         a {
@@ -252,7 +245,7 @@ footer {
         .featured-caption {
             padding: 12px;
             font-size: 0.85rem;
-            color: $meta-color;
+            color: var(--meta-color);
             text-align: center;
         }
     }
@@ -261,23 +254,23 @@ footer {
 /* ============ Right Sidebar - Pinned Posts ============ */
 .sidebar-right {
     .pinned-post-card {
-        background: $card-bg;
+        background: var(--card-bg);
         border-radius: 8px;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        box-shadow: var(--shadow);
         margin-bottom: 20px;
         padding: 15px;
         transition: transform 0.2s, box-shadow 0.2s;
         
         &:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: var(--shadow-hover);
         }
         
         .pinned-label {
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: $accent-color;
+            color: var(--accent-color);
             margin-bottom: 8px;
             font-weight: 600;
         }
@@ -288,18 +281,18 @@ footer {
             line-height: 1.4;
             
             a {
-                color: $text-color;
+                color: var(--text-color);
                 text-decoration: none;
                 
                 &:hover {
-                    color: $accent-color;
+                    color: var(--accent-color);
                 }
             }
         }
         
         .pinned-excerpt {
             font-size: 0.85rem;
-            color: $meta-color;
+            color: var(--meta-color);
             line-height: 1.5;
             display: -webkit-box;
             -webkit-line-clamp: 3;

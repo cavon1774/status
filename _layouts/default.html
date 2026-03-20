@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/themes/dark.css' | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:image" content="{{ site.url }}/assets/images/share-default.jpg">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
@@ -21,174 +22,130 @@
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="{{ site.url }}/assets/images/share-default.jpg">
 
-    <!-- CRITICAL STYLES (Inline for reliability on all hosts) -->
     <style>
-        /* ============ Layout Grid ============ */
-        .sidebar-wrapper { display: none; }
-        
-        @media (min-width: 1200px) {
-            .sidebar-wrapper {
-                display: grid !important;
-                grid-template-columns: 250px 1fr 250px !important;
-                gap: 30px !important;
-                max-width: 1200px !important;
-                margin: 0 auto !important;
-                padding: 20px !important;
-            }
-            .sidebar-left, .sidebar-right { display: block !important; }
-            .main-content { min-width: 0 !important; }
-            .container { display: none !important; }
-        }
-        
-        @media (max-width: 1199px) {
-            .sidebar-wrapper { display: none !important; }
-            .container { display: block !important; }
-        }
+    /* ============ Layout Grid ============ */
+    .sidebar-wrapper { display: none; }
 
-        /* ============ Base Colors ============ */
-        :root {
-            --bg-color: #f0f2f5;
-            --card-bg: #ffffff;
-            --text-color: #1c1e21;
-            --meta-color: #65676b;
-            --accent-color: #007bff;
+    @media (min-width: 1200px) {
+        .sidebar-wrapper {
+            display: grid !important;
+            grid-template-columns: 250px 1fr 250px !important;
+            gap: 30px !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 20px !important;
         }
+        .sidebar-left, .sidebar-right { display: block !important; }
+        .main-content { min-width: 0 !important; }
+        .container { display: none !important; }
+    }
 
-        /* ============ Profile Header ============ */
-        .profile-header {
-            text-align: center;
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .profile-header .avatar img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--bg-color);
-        }
-        .profile-header h1 { margin: 15px 0 5px; font-size: 1.5rem; color: var(--text-color); }
-        .profile-header .bio { color: var(--meta-color); margin-bottom: 15px; }
-        .profile-header .social-links a {
-            color: var(--accent-color);
-            margin: 0 10px;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
+    @media (max-width: 1199px) {
+        .sidebar-wrapper { display: none !important; }
+        .container { display: block !important; }
+    }
 
-        /* ============ Status Cards ============ */
-        .status-card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .status-meta {
-            display: flex;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--meta-color);
-            margin-bottom: 10px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        .status-content { margin-bottom: 20px; color: var(--text-color); }
-        .status-content img {
-            max-width: 100%;
-            max-height: 400px;
-            border-radius: 8px;
-            display: block;
-            margin: 15px 0;
-        }
-        .status-actions {
-            display: flex;
-            gap: 10px;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-        .share-btn {
-            background: none;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            color: var(--meta-color);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-        .share-btn:hover { background-color: #f0f2f5; color: var(--accent-color); }
+    /* ============ Card Backgrounds ============ */
+    .profile-header {
+        background: var(--card-bg) !important;
+        color: var(--text-color) !important;
+        border-radius: 8px !important;
+        box-shadow: var(--shadow) !important;
+    }
 
-        /* ============ Left Sidebar - Featured Images ============ */
-        .sidebar-left .featured-image-card {
-            background: var(--card-bg) !important;
-            border-radius: 8px !important;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
-            margin-bottom: 20px !important;
-            overflow: hidden !important;
-        }
-        .sidebar-left .featured-image-card a { display: block !important; }
-        .sidebar-left .featured-image-card img {
-            width: 100% !important;
-            height: auto !important;
-            display: block !important;
-        }
-        .sidebar-left .featured-image-card .featured-caption {
-            padding: 12px !important;
-            font-size: 0.85rem !important;
-            color: var(--meta-color) !important;
-            text-align: center !important;
-            background: var(--card-bg) !important;
-        }
+    .status-card {
+        background: var(--card-bg) !important;
+        color: var(--text-color) !important;
+        border-radius: 8px !important;
+        box-shadow: var(--shadow) !important;
+    }
 
-        /* ============ Right Sidebar - Pinned Posts ============ */
-        .sidebar-right .pinned-post-card {
-            background: var(--card-bg) !important;
-            border-radius: 8px !important;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
-            margin-bottom: 20px !important;
-            padding: 15px !important;
-            color: var(--text-color) !important;
-        }
-        .sidebar-right .pinned-post-card .pinned-label {
-            font-size: 0.7rem !important;
-            text-transform: uppercase !important;
-            letter-spacing: 1px !important;
-            color: var(--accent-color) !important;
-            margin-bottom: 8px !important;
-            font-weight: 600 !important;
-        }
-        .sidebar-right .pinned-post-card .pinned-title {
-            font-size: 1rem !important;
-            margin: 0 0 8px 0 !important;
-            line-height: 1.4 !important;
-        }
-        .sidebar-right .pinned-post-card .pinned-title a {
-            color: var(--text-color) !important;
-            text-decoration: none !important;
-        }
-        .sidebar-right .pinned-post-card .pinned-title a:hover {
-            color: var(--accent-color) !important;
-        }
-        .sidebar-right .pinned-post-card .pinned-excerpt {
-            font-size: 0.85rem !important;
-            color: var(--meta-color) !important;
-            line-height: 1.5 !important;
-        }
+    .featured-image-card {
+        background: var(--card-bg) !important;
+        color: var(--text-color) !important;
+        border-radius: 8px !important;
+        box-shadow: var(--shadow) !important;
+        margin-bottom: 20px !important;  /* ← Fixes vertical overlap */
+    }
 
-        /* ============ Footer ============ */
-        footer {
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--meta-color);
-            margin-top: 40px;
-        }
+    .featured-image-card img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    .featured-image-card .featured-caption {
+        background: var(--card-bg) !important;
+        color: var(--meta-color) !important;
+        padding: 12px !important;
+        text-align: center !important;
+    }
+
+    .pinned-post-card {
+        background: var(--card-bg) !important;
+        color: var(--text-color) !important;
+        border-radius: 8px !important;
+        box-shadow: var(--shadow) !important;
+        padding: 15px !important;
+        margin-bottom: 20px !important;  /* ← Fixes vertical overlap */
+    }
+
+    .pinned-post-card .pinned-label {
+        color: var(--accent-color) !important;
+        font-size: 0.7rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        font-weight: 600 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .pinned-post-card .pinned-title {
+        font-size: 1rem !important;
+        margin: 0 0 8px 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    .pinned-post-card .pinned-title a {
+        color: var(--text-color) !important;
+        text-decoration: none !important;
+    }
+
+    .pinned-post-card .pinned-title a:hover {
+        color: var(--accent-color) !important;
+    }
+
+    .pinned-post-card .pinned-excerpt {
+        color: var(--meta-color) !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* ============ Borders & Dividers ============ */
+    .status-meta {
+        border-bottom-color: var(--border-color) !important;
+    }
+
+    .status-actions {
+        border-top-color: var(--border-color) !important;
+    }
+
+    .share-btn {
+        border-color: var(--border-color) !important;
+        color: var(--meta-color) !important;
+    }
+
+    .share-btn:hover {
+        background-color: var(--bg-color) !important;
+        color: var(--accent-color) !important;
+    }
+
+    /* ============ Footer ============ */
+    footer {
+        color: var(--meta-color) !important;
+        text-align: center !important;
+        font-size: 0.8rem !important;
+        margin-top: 40px !important;
+    }
     </style>
 </head>
 <body>
@@ -228,7 +185,7 @@
             <main class="feed">
                 {{ content }}
             </main>
-            
+
             <!-- Footer -->
             <footer>
                 <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Powered by Jekyll.</p>
@@ -238,7 +195,7 @@
         <!-- Right Sidebar - Pinned Posts -->
         <aside class="sidebar-right">
             {% assign pinned = site.posts | where: "pin", true | limit: 5 %}
-            
+
             {% if pinned.size > 0 %}
                 {% for post in pinned %}
                     <div class="pinned-post-card">
@@ -250,7 +207,7 @@
                     </div>
                 {% endfor %}
             {% else %}
-                <div style="font-size: 0.85rem; color: #65676b; text-align: center; padding: 20px;">
+                <div style="font-size: 0.85rem; color: var(--meta-color); text-align: center; padding: 20px;">
                     No pinned posts yet.
                 </div>
             {% endif %}
@@ -278,7 +235,7 @@
         <main class="feed">
             {{ content }}
         </main>
-        
+
         <!-- Footer -->
         <footer>
             <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Powered by Jekyll.</p>
