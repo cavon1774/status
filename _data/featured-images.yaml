@@ -1,16 +1,16 @@
 # _data/featured-images.yml
 - image: /assets/images/featured/1x01.jpg
   link: https://www.amazon.com/dp/B0DXCKSJQC
-  alt: "Set custom alt msg here"
+  alt: "1x01 Dark Night of the Soul"
   
 - image: /assets/images/featured/1x02.jpg
   link: https://www.amazon.com/dp/B0DZ2JW8JF
-  alt: "Set custom alt msg here"
+  alt: "1x02 Dark Ones of the City"
   
 - image: /assets/images/featured/1x03.jpg
   link: https://www.amazon.com/dp/B0F1LDZMLK
-  alt: "Set custom alt msg here"
+  alt: "1x03 Dark Fate of the Dead"
 
 - image: /assets/images/featured/1x04.jpg
   link: https://www.amazon.com/dp/B0F97GBL57
-  alt: "Set custom alt msg here"
+  alt: "1x04 Dark Angels of the After"
