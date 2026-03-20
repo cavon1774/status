@@ -135,3 +135,76 @@ footer {
     color: $meta-color;
     margin-top: 40px;
 }
+
+/* ============ Mood Indicator Styles ============ */
+/* ============ Mood Text Styles ============ */
+.mood-text {
+    margin-left: 8px;
+    font-style: italic;
+    color: $meta-color;
+    font-size: 0.85rem;
+    
+    &::before {
+        content: "— ";
+        opacity: 0.6;
+    }
+}
+
+.mood-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.status-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: $meta-color;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* ============ Entrance Animations ============ */
+.status-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Stagger animations for each card */
+.status-card:nth-child(1) { animation-delay: 0.05s; }
+.status-card:nth-child(2) { animation-delay: 0.1s; }
+.status-card:nth-child(3) { animation-delay: 0.15s; }
+.status-card:nth-child(4) { animation-delay: 0.2s; }
+.status-card:nth-child(5) { animation-delay: 0.25s; }
+.status-card:nth-child(6) { animation-delay: 0.3s; }
+.status-card:nth-child(7) { animation-delay: 0.35s; }
+.status-card:nth-child(8) { animation-delay: 0.4s; }
+.status-card:nth-child(9) { animation-delay: 0.45s; }
+.status-card:nth-child(10) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect for extra polish */
+.status-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+}

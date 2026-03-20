@@ -4,9 +4,18 @@ layout: default
 
 <article class="status-card single-post">
     <div class="status-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}">
-            {{ page.date | date: "%B %d, %Y • %I:%M %p" }}
-        </time>
+        {% if page.mood %}
+            {% assign mood_color = site.moods[page.mood] | default: site.moods.default %}
+            <span class="mood-indicator" style="background-color: {{ mood_color }}; display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle;"></span>
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%B %d, %Y • %I:%M %p" }}
+            </time>
+            <span style="margin-left:8px; font-style:italic; color:#65676b; font-size:0.85rem;">— feeling {{ page.mood }}</span>
+        {% else %}
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%B %d, %Y • %I:%M %p" }}
+            </time>
+        {% endif %}
     </div>
 
     <div class="status-content">

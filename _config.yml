@@ -13,6 +13,17 @@ permalink: /:title.html
 markdown: kramdown
 highlighter: rouge
 
+# Mood Colors
+moods:
+  calm: "#87ceeb"        # Light blue
+  happy: "#ffd700"       # Gold
+  excited: "#ff6b6b"     # Red
+  thoughtful: "#9b59b6"  # Purple
+  tired: "#95a5a6"       # Gray
+  creative: "#2ecc71"    # Green
+  focused: "#3498db"     # Blue
+  default: "#bdc3c7"     # Light gray fallback
+
 # Variables for your profile
 author:
   name: "DA Rasmussen"

@@ -7,9 +7,18 @@ layout: default
 {% for post in sorted_posts %}
     <article class="status-card">
         <div class="status-meta">
-            <time datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: "%B %d, %Y • %I:%M %p" }}
-            </time>
+            {% if post.mood %}
+                {% assign mood_color = site.moods[post.mood] | default: site.moods.default %}
+                <span class="mood-indicator" style="background-color: {{ mood_color }}; display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle;"></span>
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%B %d, %Y • %I:%M %p" }}
+                </time>
+                <span style="margin-left:8px; font-style:italic; color:#65676b; font-size:0.85rem;">— feeling {{ post.mood }}</span>
+            {% else %}
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%B %d, %Y • %I:%M %p" }}
+                </time>
+            {% endif %}
         </div>
         <div class="status-content">
             {% if post.title %}<h2 class="status-title">{{ post.title }}</h2>{% endif %}
