@@ -7,6 +7,7 @@ A simple, clean, Facebook-style status wall built with Jekyll. Perfect for shari
 
 ![Preview](https://img.shields.io/badge/Jekyll-4.x-red?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+![Featured](https://img.shields.io/badge/featured%20on-JT-red.svg)
 
 ---
 
