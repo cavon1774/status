@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+    <title>Welcome to My Wall | My Status Wall</title>
+    <link rel="stylesheet" href="/assets/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:image" content="{{ site.url }}/assets/images/share-default.jpg">
+    <meta property="og:url" content="https://status.darbooks.com/test.html">
+    <meta property="og:title" content="Welcome to My Wall | My Status Wall">
+    <meta property="og:description" content="Quick updates and snippets.">
+    <meta property="og:image" content="https://status.darbooks.com/assets/images/share-default.jpg">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-    <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:image" content="{{ site.url }}/assets/images/share-default.jpg">
+    <meta name="twitter:url" content="https://status.darbooks.com/test.html">
+    <meta name="twitter:title" content="Welcome to My Wall | My Status Wall">
+    <meta name="twitter:description" content="Quick updates and snippets.">
+    <meta name="twitter:image" content="https://status.darbooks.com/assets/images/share-default.jpg">
 
     <!-- CRITICAL STYLES (Inline for reliability on all hosts) -->
     <style>
@@ -197,14 +197,35 @@
     <div class="sidebar-wrapper">
         <!-- Left Sidebar - Featured Images -->
         <aside class="sidebar-left">
-            {% for item in site.data.featured-images %}
+            
                 <div class="featured-image-card">
-                    <a href="{{ item.link }}" target="_blank" rel="noopener">
-                        <img src="{{ item.image }}" alt="{{ item.alt }}">
+                    <a href="https://www.amazon.com/dp/B0DXCKSJQC" target="_blank" rel="noopener">
+                        <img src="/assets/images/featured/1x01.jpg" alt="Set custom alt msg here">
                     </a>
-                    <div class="featured-caption">{{ item.alt }}</div>
+                    <div class="featured-caption">Set custom alt msg here</div>
                 </div>
-            {% endfor %}
+            
+                <div class="featured-image-card">
+                    <a href="https://www.amazon.com/dp/B0DZ2JW8JF" target="_blank" rel="noopener">
+                        <img src="/assets/images/featured/1x02.jpg" alt="Set custom alt msg here">
+                    </a>
+                    <div class="featured-caption">Set custom alt msg here</div>
+                </div>
+            
+                <div class="featured-image-card">
+                    <a href="https://www.amazon.com/dp/B0F1LDZMLK" target="_blank" rel="noopener">
+                        <img src="/assets/images/featured/1x03.jpg" alt="Set custom alt msg here">
+                    </a>
+                    <div class="featured-caption">Set custom alt msg here</div>
+                </div>
+            
+                <div class="featured-image-card">
+                    <a href="https://www.amazon.com/dp/B0F97GBL57" target="_blank" rel="noopener">
+                        <img src="/assets/images/featured/1x04.jpg" alt="Set custom alt msg here">
+                    </a>
+                    <div class="featured-caption">Set custom alt msg here</div>
+                </div>
+            
         </aside>
 
         <!-- Main Content (Profile + Feed) -->
@@ -212,10 +233,10 @@
             <!-- Profile Header -->
             <header class="profile-header">
                 <div class="avatar">
-                    <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}">
+                    <img src="/assets/avatar.jpg" alt="DA Rasmussen">
                 </div>
-                <h1>{{ site.author.name }}</h1>
-                <p class="bio">{{ site.author.bio }}</p>
+                <h1>DA Rasmussen</h1>
+                <p class="bio">Posting book and status updates.</p>
                 <div class="social-links">
                     <a href="https://facebook.com/darbookspub"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://github.com/breakthebull"><i class="fab fa-github"></i></a>
@@ -226,34 +247,80 @@
 
             <!-- The Feed -->
             <main class="feed">
-                {{ content }}
+                <article class="status-card single-post">
+    <div class="status-meta">
+        
+            <time datetime="2024-01-15T11:00:00-06:00">
+                January 15, 2024 • 11:00 AM
+            </time>
+        
+    </div>
+
+    <div class="status-content">
+        
+            <h2 class="status-title">Welcome to My Wall</h2>
+        
+        <p>This post will appear in the right sidebar!</p>
+
+    </div>
+
+    <div class="status-actions">
+        <!-- Facebook Share -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://status.darbooks.com/test.html" target="_blank" class="share-btn">
+            <i class="fab fa-facebook-f"></i> Share
+        </a>
+        
+        <!-- Pinterest Share -->
+        <a href="https://pinterest.com/pin/create/button/?url=https://status.darbooks.com/test.html&description=Welcome to My Wall" target="_blank" class="share-btn">
+            <i class="fab fa-pinterest"></i> Pin
+        </a>
+
+        <!-- Copy Link -->
+        <button onclick="navigator.clipboard.writeText('https://status.darbooks.com/test.html'); alert('Link copied!')" class="share-btn">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+    
+    <!-- Back to Feed Link -->
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="/" class="share-btn" style="display: inline-flex;">
+            <i class="fas fa-arrow-left"></i> Back to Feed
+        </a>
+    </div>
+</article>
             </main>
             
             <!-- Footer -->
             <footer>
-                <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Powered by Jekyll.</p>
+                <p>&copy; 2026 DA Rasmussen. Powered by Jekyll.</p>
             </footer>
         </div>
 
         <!-- Right Sidebar - Pinned Posts -->
         <aside class="sidebar-right">
-            {% assign pinned = site.posts | where: "pin", true | limit: 5 %}
             
-            {% if pinned.size > 0 %}
-                {% for post in pinned %}
+            
+            
+                
                     <div class="pinned-post-card">
                         <div class="pinned-label">📌 Pinned</div>
                         <h3 class="pinned-title">
-                            <a href="{{ post.url }}">{{ post.title }}</a>
+                            <a href="/test.html">Welcome to My Wall</a>
                         </h3>
-                        <div class="pinned-excerpt">{{ post.excerpt }}</div>
+                        <div class="pinned-excerpt"><p>This post will appear in the right sidebar!</p>
+</div>
                     </div>
-                {% endfor %}
-            {% else %}
-                <div style="font-size: 0.85rem; color: #65676b; text-align: center; padding: 20px;">
-                    No pinned posts yet.
-                </div>
-            {% endif %}
+                
+                    <div class="pinned-post-card">
+                        <div class="pinned-label">📌 Pinned</div>
+                        <h3 class="pinned-title">
+                            <a href="/featured-post.html">Welcome to My Status Wall</a>
+                        </h3>
+                        <div class="pinned-excerpt"><p>This is a pinned post that always shows in the right sidebar. You can use this for important announcements, about me, or anything you want to highlight!</p>
+</div>
+                    </div>
+                
+            
         </aside>
     </div>
 
@@ -262,10 +329,10 @@
         <!-- Profile Header -->
         <header class="profile-header">
             <div class="avatar">
-                <img src="{{ site.author.avatar }}" alt="{{ site.author.name }}">
+                <img src="/assets/avatar.jpg" alt="DA Rasmussen">
             </div>
-            <h1>{{ site.author.name }}</h1>
-            <p class="bio">{{ site.author.bio }}</p>
+            <h1>DA Rasmussen</h1>
+            <p class="bio">Posting book and status updates.</p>
             <div class="social-links">
                 <a href="https://facebook.com/darbookspub"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://github.com/breakthebull"><i class="fab fa-github"></i></a>
@@ -276,12 +343,52 @@
 
         <!-- The Feed -->
         <main class="feed">
-            {{ content }}
+            <article class="status-card single-post">
+    <div class="status-meta">
+        
+            <time datetime="2024-01-15T11:00:00-06:00">
+                January 15, 2024 • 11:00 AM
+            </time>
+        
+    </div>
+
+    <div class="status-content">
+        
+            <h2 class="status-title">Welcome to My Wall</h2>
+        
+        <p>This post will appear in the right sidebar!</p>
+
+    </div>
+
+    <div class="status-actions">
+        <!-- Facebook Share -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://status.darbooks.com/test.html" target="_blank" class="share-btn">
+            <i class="fab fa-facebook-f"></i> Share
+        </a>
+        
+        <!-- Pinterest Share -->
+        <a href="https://pinterest.com/pin/create/button/?url=https://status.darbooks.com/test.html&description=Welcome to My Wall" target="_blank" class="share-btn">
+            <i class="fab fa-pinterest"></i> Pin
+        </a>
+
+        <!-- Copy Link -->
+        <button onclick="navigator.clipboard.writeText('https://status.darbooks.com/test.html'); alert('Link copied!')" class="share-btn">
+            <i class="fas fa-copy"></i> Copy
+        </button>
+    </div>
+    
+    <!-- Back to Feed Link -->
+    <div style="margin-top: 20px; text-align: center;">
+        <a href="/" class="share-btn" style="display: inline-flex;">
+            <i class="fas fa-arrow-left"></i> Back to Feed
+        </a>
+    </div>
+</article>
         </main>
         
         <!-- Footer -->
         <footer>
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Powered by Jekyll.</p>
+            <p>&copy; 2026 DA Rasmussen. Powered by Jekyll.</p>
         </footer>
     </div>
 

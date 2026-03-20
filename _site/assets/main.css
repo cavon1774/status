@@ -1,0 +1,312 @@
+@charset "UTF-8";
+/* ============ Variables ============ */
+/* ============ Base Styles ============ */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1c1e21;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============ Container (Mobile/Tablet - Default) ============ */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ============ Sidebar Wrapper (Desktop Only - 1200px+) ============ */
+.sidebar-wrapper {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .sidebar-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .sidebar-left,
+  .sidebar-right {
+    display: block;
+  }
+  .main-content {
+    min-width: 0;
+  }
+  /* Hide old container on desktop since sidebar-wrapper takes over */
+  .container {
+    display: none;
+  }
+}
+/* ============ Profile Header ============ */
+.profile-header {
+  text-align: center;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.profile-header .avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f0f2f5;
+}
+.profile-header h1 {
+  margin: 15px 0 5px;
+  font-size: 1.5rem;
+}
+.profile-header .bio {
+  color: #65676b;
+  margin-bottom: 15px;
+}
+.profile-header .social-links a {
+  color: #007bff;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* ============ Status Cards ============ */
+.status-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Stagger animations for each card */
+.status-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.status-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.status-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.status-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.status-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.status-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.status-card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.status-card:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.status-card:nth-child(9) {
+  animation-delay: 0.45s;
+}
+
+.status-card:nth-child(10) {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============ Status Meta (Date + Mood) ============ */
+.status-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #65676b;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.mood-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.mood-text {
+  margin-left: 8px;
+  font-style: italic;
+  color: #65676b;
+  font-size: 0.85rem;
+}
+.mood-text::before {
+  content: "— ";
+  opacity: 0.6;
+}
+
+.status-title {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+/* ============ Status Content & Images ============ */
+.status-content {
+  margin-bottom: 20px;
+}
+.status-content img {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 15px 0;
+  object-fit: contain;
+}
+.status-content p + img, .status-content img + p {
+  margin-top: 15px;
+}
+
+article.status-card.single-post .status-content img {
+  max-height: 500px;
+}
+
+/* ============ Action Buttons ============ */
+.status-actions {
+  display: flex;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.share-btn {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #65676b;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.share-btn:hover {
+  background-color: #f0f2f5;
+  color: #007bff;
+}
+
+/* ============ Footer ============ */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #65676b;
+  margin-top: 40px;
+}
+
+/* ============ Left Sidebar - Featured Images ============ */
+.sidebar-left .featured-image-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sidebar-left .featured-image-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.sidebar-left .featured-image-card a {
+  display: block;
+}
+.sidebar-left .featured-image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.sidebar-left .featured-image-card .featured-caption {
+  padding: 12px;
+  font-size: 0.85rem;
+  color: #65676b;
+  text-align: center;
+}
+
+/* ============ Right Sidebar - Pinned Posts ============ */
+.sidebar-right .pinned-post-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sidebar-right .pinned-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.sidebar-right .pinned-post-card .pinned-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #007bff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.sidebar-right .pinned-post-card .pinned-title {
+  font-size: 1rem;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+.sidebar-right .pinned-post-card .pinned-title a {
+  color: #1c1e21;
+  text-decoration: none;
+}
+.sidebar-right .pinned-post-card .pinned-title a:hover {
+  color: #007bff;
+}
+.sidebar-right .pinned-post-card .pinned-excerpt {
+  font-size: 0.85rem;
+  color: #65676b;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============ Feed Area ============ */
+.feed {
+  min-width: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

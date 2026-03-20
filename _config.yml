@@ -29,3 +29,9 @@ author:
   name: "DA Rasmussen"
   bio: "Posting book and status updates."
   avatar: "/assets/avatar.jpg"
+
+# Enable featured true or false?
+collections:
+  featured:      
+    output: true 
+    permalink: /:title/
