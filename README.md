@@ -1,4 +1,5 @@
-![screenshot](https://github.com/breakthebull/status/blob/main/screenshot.PNG)
+![screenshot](https://github.com/breakthebull/status/blob/main/screenshot.PNG) 
+![screenshot](https://github.com/breakthebull/status/blob/main/Capture.PNG)
 ---
 
 # 📝 Status Wall - A Microblog Jekyll Theme
@@ -231,21 +232,184 @@ bundle exec jekyll build
 ```
 ---
 
-That's fantastic news! 🎉 I'm glad the inline styles did the trick. Sometimes hosting environments can be tricky with CSS caching, so having those styles embedded directly in the HTML ensures it always looks exactly how you intend.
+## 🖼️ Featured Images (Left Sidebar)
 
-You've built a really solid custom status wall now! Here's a quick recap of everything we've added together:
+Display clickable promotional images, book covers, or favorite photos in the left sidebar on desktop screens.
 
-### ✅ Your Feature List
-- **Profile Header** with avatar and bio
-- **Chronological Feed** (newest first)
-- **Flat Permalinks** (easy FTP upload without folders)
-- **Image Support** (responsive within cards)
-- **Social Sharing** (Facebook, Pinterest, Copy Link)
-- **Open Graph Tags** (correct share previews)
-- **Auto-Timestamping** (via `new-post.bat`)
-- **Mood Indicators** (colored dot + text)
-- **Entrance Animations** (smooth fade-in)
-- **Mobile Responsive** design
+### How to Add Featured Images
+
+1. **Add Your Image**
+   
+   Place your image in the `assets/images/featured/` folder:
+   ```
+   assets/
+   └── images/
+       └── featured/
+           ├── book-cover.jpg
+           ├── promo-banner.png
+           └── portfolio-photo.jpg
+   ```
+
+2. **Edit the Configuration File**
+   
+   Open `_data/featured-images.yml` and add an entry:
+   ```yaml
+   - image: /assets/images/featured/book-cover.jpg
+     link: https://amazon.com/yourbook
+     alt: "My New Book - Available Now!"
+   
+   - image: /assets/images/featured/promo-banner.png
+     link: https://yourwebsite.com/promo
+     alt: "Special Promotion"
+   ```
+
+3. **Rebuild & Upload**
+   ```bash
+   bundle exec jekyll build
+   ```
+   Upload the updated `_site/` contents to your host.
+
+### Configuration Options
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| `image` | Path to your image file | `/assets/images/featured/photo.jpg` |
+| `link` | URL when image is clicked | `https://yourwebsite.com` |
+| `alt` | Caption text displayed below image | "Check out my latest work!" |
+
+### Tips for Best Results
+
+| Tip | Recommendation |
+|-----|----------------|
+| **Image Size** | 250px wide × 300-400px tall (fits sidebar perfectly) |
+| **Format** | `.jpg` for photos, `.png` for graphics with text |
+| **Compression** | Use [TinyPNG](https://tinypng.com/) to reduce file size |
+| **Number of Images** | No limit, but 3-5 works best for readability |
+
+### How to Remove or Update
+
+- **Remove:** Delete the entry from `_data/featured-images.yml`
+- **Replace:** Update the `image:` path to point to a new file
+- **Change Link:** Edit the `link:` URL
+- **Update Caption:** Modify the `alt:` text
+
+---
+
+## 📌 Pinned Posts (Right Sidebar)
+
+Highlight important announcements, welcome messages, or key content in the right sidebar on desktop screens.
+
+### How to Pin a Post
+
+1. **Create or Edit a Post**
+   
+   Open any post in `_posts/` and add `pin: true` to the front matter:
+   ```markdown
+   ---
+   layout: post
+   title: "Welcome to My Status Wall"
+   date: 2024-01-15 12:00:00 -0500
+   pin: true
+   ---
+   This post will appear in the right sidebar!
+   ```
+
+2. **Using the Batch File (Windows)**
+   
+   When you run `new-post.bat`, answer `y` when asked:
+   ```
+   Pin this post to sidebar? (y/n): y
+   ```
+
+3. **Rebuild & Upload**
+   ```bash
+   bundle exec jekyll build
+   ```
+   Upload the updated `_site/` contents to your host.
+
+### How Many Posts Show?
+
+- **Default:** Up to 5 pinned posts display in the sidebar
+- **Order:** Newest pinned posts appear first
+- **Too Many?** Only the 5 most recent pinned posts show automatically
+
+### How to Unpin a Post
+
+Simply remove or change the `pin:` field in the post's front matter:
+
+```markdown
+---
+layout: post
+title: "No Longer Pinned"
+date: 2024-01-15 12:00:00 -0500
+pin: false    # ← Change to false or remove this line entirely
+---
+```
+
+### Best Uses for Pinned Posts
+
+| Use Case | Example |
+|----------|---------|
+| **Welcome Message** | Introduce yourself to new visitors |
+| **Important Announcement** | Site updates, news, or changes |
+| **Popular Content** | Link to your most popular post |
+| **Contact Info** | How people can reach you |
+| **Current Project** | What you're working on right now |
+
+---
+
+## 📱 Responsive Behavior
+
+| Screen Width | Featured Images | Pinned Posts |
+|--------------|-----------------|--------------|
+| **1200px and above** | ✅ Visible (left sidebar) | ✅ Visible (right sidebar) |
+| **Below 1200px** | ❌ Hidden | ❌ Hidden |
+
+On tablets and mobile devices, the sidebars automatically hide to keep the focus on your main feed. This ensures a clean, readable experience on smaller screens.
+
+---
+
+## 🛠️ Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| **Featured images not showing** | Check `_data/featured-images.yml` exists and has correct indentation |
+| **Images appear broken** | Verify image path is correct (starts with `/assets/images/featured/`) |
+| **Pinned posts not appearing** | Ensure `pin: true` is in the post front matter (not quoted) |
+| **Sidebars show at top of page** | Hard refresh your browser (`Ctrl + Shift + R`) |
+| **Cards look transparent** | Rebuild site and re-upload `_site/` folder |
+| **Only 5 pinned posts show** | This is intentional! Remove old pins to make room for new ones |
+
+---
+
+## 📋 Quick Reference
+
+### Add Featured Image
+```yaml
+# _data/featured-images.yml
+- image: /assets/images/featured/new-image.jpg
+  link: https://yourlink.com
+  alt: "Description here"
+```
+
+### Pin a Post
+```markdown
+# _posts/2024-01-15-your-post.md
+---
+layout: post
+title: "Your Title"
+date: 2024-01-15 12:00:00 -0500
+pin: true
+---
+```
+
+### Using Batch File
+```
+Double-click new-post.bat
+→ Enter title
+→ Enter mood (optional)
+→ Pin this post? Type: y
+```
 
 ---
 
