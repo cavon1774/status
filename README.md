@@ -1,3 +1,6 @@
+![screenshot](https://github.com/breakthebull/status/blob/main/screenshot.PNG)
+---
+
 # 📝 Status Wall - A Microblog Jekyll Theme
 
 A simple, clean, Facebook-style status wall built with Jekyll. Perfect for sharing quick updates, snippets, and thoughts without the complexity of a traditional blog.
