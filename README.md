@@ -1,4 +1,5 @@
 ![screenshot](https://github.com/breakthebull/status/blob/main/screenshot.PNG) 
+![screenshot](https://github.com/breakthebull/status/blob/main/status-theme.png)
 ![screenshot](https://github.com/breakthebull/status/blob/main/Capture.png)
 ![screenshot](https://github.com/breakthebull/status/blob/main/callout-styles.PNG)
 ---
