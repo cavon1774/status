@@ -1,5 +1,6 @@
 ![screenshot](https://github.com/breakthebull/status/blob/main/screenshot.PNG) 
 ![screenshot](https://github.com/breakthebull/status/blob/main/Capture.PNG)
+![screenshot](https://github.com/breakthebull/status/blob/main/callout-styles.PNG)
 ---
 
 # 📝 Status Wall - A Microblog Jekyll Theme
@@ -211,6 +212,36 @@ Display clickable promotional images, book covers, or favorite photos in the lef
 | `link` | URL when image is clicked | `https://yourwebsite.com` |
 | `alt` | Caption text displayed below image | "Check out my latest work!" |
 
+---
+
+# Using Callouts in Posts
+
+```
+---
+layout: post
+title: "Markdown Callouts"
+date: 2026-03-21 01:14:47 -0500
+mood: 
+pin: true
+---
+
+{:.callout-note}
+> **Note**
+> This is a note callout.
+
+{:.callout-tip}
+> **Tip**
+> This is a tip callout.
+
+{:.callout-warning}
+> **Warning**
+> This is a warning callout.
+
+{:.callout-danger}
+> **Danger**
+> This is a danger callout.
+
+```
 ---
 
 ## 📌 Pinned Posts (Right Sidebar)
