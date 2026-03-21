@@ -42,7 +42,7 @@ gem install jekyll bundler
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/status-wall.git
+git clone https://github.com/breakthebull/status-wall.git
 cd status-wall
 
 # Install dependencies
@@ -277,22 +277,6 @@ Display clickable promotional images, book covers, or favorite photos in the lef
 | `link` | URL when image is clicked | `https://yourwebsite.com` |
 | `alt` | Caption text displayed below image | "Check out my latest work!" |
 
-### Tips for Best Results
-
-| Tip | Recommendation |
-|-----|----------------|
-| **Image Size** | 250px wide × 300-400px tall (fits sidebar perfectly) |
-| **Format** | `.jpg` for photos, `.png` for graphics with text |
-| **Compression** | Use [TinyPNG](https://tinypng.com/) to reduce file size |
-| **Number of Images** | No limit, but 3-5 works best for readability |
-
-### How to Remove or Update
-
-- **Remove:** Delete the entry from `_data/featured-images.yml`
-- **Replace:** Update the `image:` path to point to a new file
-- **Change Link:** Edit the `link:` URL
-- **Update Caption:** Modify the `alt:` text
-
 ---
 
 ## 📌 Pinned Posts (Right Sidebar)
@@ -369,50 +353,6 @@ On tablets and mobile devices, the sidebars automatically hide to keep the focus
 
 ---
 
-## 🛠️ Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| **Featured images not showing** | Check `_data/featured-images.yml` exists and has correct indentation |
-| **Images appear broken** | Verify image path is correct (starts with `/assets/images/featured/`) |
-| **Pinned posts not appearing** | Ensure `pin: true` is in the post front matter (not quoted) |
-| **Sidebars show at top of page** | Hard refresh your browser (`Ctrl + Shift + R`) |
-| **Cards look transparent** | Rebuild site and re-upload `_site/` folder |
-| **Only 5 pinned posts show** | This is intentional! Remove old pins to make room for new ones |
-
----
-
-## 📋 Quick Reference
-
-### Add Featured Image
-```yaml
-# _data/featured-images.yml
-- image: /assets/images/featured/new-image.jpg
-  link: https://yourlink.com
-  alt: "Description here"
-```
-
-### Pin a Post
-```markdown
-# _posts/2024-01-15-your-post.md
----
-layout: post
-title: "Your Title"
-date: 2024-01-15 12:00:00 -0500
-pin: true
----
-```
-
-### Using Batch File
-```
-Double-click new-post.bat
-→ Enter title
-→ Enter mood (optional)
-→ Pin this post? Type: y
-```
-
----
-
 ### How to Use Moods
 
 Add a `mood` field to your post front matter:
@@ -440,39 +380,6 @@ mood: calm
 
 ---
 
-### Animations
-
-Posts automatically fade in when the page loads. Hover over cards for a subtle lift effect.
-
----
-
-## 🌐 Deploying to Your Host
-
-### Method 1: Jekyll Build (Recommended) ⭐
-
-This method includes all your templates, styling, and layout automatically.
-
-```bash
-# Generate static files
-bundle exec jekyll build
-```
-
-**Upload these files to your host:**
-
-| File/Folder | Upload Location |
-|-------------|-----------------|
-| `index.html` | Root folder |
-| `*.html` (all post files) | Root folder |
-| `assets/` contents | `assets/` folder on host |
-
-**Advantages:**
-- ✅ All styling and layout included
-- ✅ Share buttons work correctly
-- ✅ Profile header on every page
-- ✅ No manual HTML editing needed
-
----
-
 ## 🎨 Customization
 
 ### Profile Information
@@ -496,13 +403,6 @@ author:
 
 ## 🎨 Quick Theme Tips
 
-### Change Theme
-Edit `_layouts/default.html` and update this line:
-```html
-<link rel="stylesheet" href="{{ '/assets/themes/dark.css' | relative_url }}">
-```
-→ Swap `dark.css` for `default.css`, `ocean.css`, or your own.
-
 ### Create a Custom Theme
 1. Create `assets/themes/your-theme.css`
 2. Add your colors:
@@ -515,24 +415,6 @@ Edit `_layouts/default.html` and update this line:
    }
    body { background: var(--bg-color); color: var(--text-color); }
    ```
-3. Link it in `default.html` and rebuild.
-
-### Key Variables
-| Variable | Controls |
-|----------|----------|
-| `--bg-color` | Page background |
-| `--card-bg` | Post/card background |
-| `--text-color` | Main text |
-| `--accent-color` | Links & buttons |
-
-### Troubleshooting
-- **Theme not changing?** → Hard rebuild: `rmdir /s /q _site && bundle exec jekyll build`
-- **Cards transparent?** → Ensure inline styles use `var(--card-bg) !important`
-- **Colors not applying?** → Check `_sass/main.scss` uses `var(--...)`, not hardcoded hex
-
----
-
-*💡 Pro Tip: Duplicate `ocean.css` as a starting point for your own theme!*
 
 ---
 
@@ -546,80 +428,6 @@ set "fullDate=%YYYY%-%MM%-%DD% %HH%:%Min%:%Sec% -0500"
                                               Change this to your timezone
 ```
 
-**Common Timezone Offsets:**
-
-| Timezone | Offset |
-|----------|--------|
-| Eastern (EST) | `-0500` |
-| Central (CST) | `-0600` |
-| Mountain (MST) | `-0700` |
-| Pacific (PST) | `-0800` |
-| UK (GMT) | `+0000` |
-| Central Europe | `+0100` |
-
-### Permalink Structure
-
-The theme uses **flat permalinks** for easy FTP uploading:
-
-```yaml
-# In _config.yml
-permalink: /:title.html
-```
-
-This creates files like `my-post.html` instead of nested folders like `/2024/01/15/my-post/index.html`.
-
-### Share Buttons
-
-Edit `_layouts/post.html` and `index.html` to change share options:
-
-```html
-<!-- Facebook -->
-<a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" class="share-btn">
-    <i class="fab fa-facebook-f"></i> Share
-</a>
-
-<!-- Pinterest -->
-<a href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url }}" class="share-btn">
-    <i class="fab fa-pinterest"></i> Pin
-</a>
-```
-
----
-
-## 📁 Project Structure
-
-```
-status-wall/
-├── _config.yml           # Site configuration
-├── _layouts/
-│   ├── default.html      # Main layout with header
-│   └── post.html         # Individual post layout
-├── _posts/               # Your status updates (.md files)
-├── _sass/
-│   └── main.scss         # Styles and colors
-├── assets/
-│   ├── images/           # Post images
-│   └── main.scss         # Compiled CSS
-├── _site/                # Generated site (after build)
-├── index.html            # Home page feed
-├── new-post.bat          # Quick post generator
-├── template.html         # Optional Pandoc template
-└── README.md             # This file
-```
-
----
-
-## 🛠️ Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| **Site shows 12:00 AM** | Add time in front matter `date: 2024-01-15 14:30:00 -0500` |
-| **Images not showing** | Use root-relative paths `/assets/images/photo.jpg` |
-| **Posts not sorting** | Ensure filenames follow `YYYY-MM-DD-title.md` format |
-| **Build errors** | Run `bundle install` to update dependencies |
-| **404 on post links** | Upload all `.html` files from `_site/` folder |
-| **Can't upload folders** | Use flat permalinks (`/:title.html`) |
-
 ---
 
 ## 📄 License
@@ -631,17 +439,6 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🤝 Contributing
 
 Feel free to fork this project and customize it for your own needs! If you make improvements, consider submitting a pull request.
-
----
-
-## 💡 Tips for Best Results
-
-1. **Keep posts short** - This is a status wall, not a blog
-2. **Compress images** - Faster loading = better experience
-3. **Post consistently** - Your feed looks best with regular updates
-4. **Test locally first** - Always run `jekyll serve` before deploying
-5. **Use Jekyll Build** - For full site deployment with all styling
-6. **Flat permalinks** - Makes FTP uploading much easier
 
 ---
 
