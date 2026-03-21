@@ -121,16 +121,6 @@ Just finished this project!
 
 #proud #completed
 ```
-
-### Image Tips
-
-| Tip | Recommendation |
-|-----|----------------|
-| **Max Width** | 1200px (larger images are automatically resized) |
-| **Format** | `.jpg` for photos, `.png` for screenshots |
-| **Compression** | Use [TinyPNG](https://tinypng.com/) to reduce file size |
-| **Multiple Images** | Add as many as you want - each on its own line |
-
 ---
 
 ## 📱 Social Media Share Images
@@ -174,62 +164,6 @@ image: /assets/images/custom-share.jpg
 Your post content here...
 ```
 
-| Scenario | Image Used |
-|----------|------------|
-| Post has `image:` field | Custom image specified |
-| Post has no `image:` field | `share-default.jpg` |
-
-### Recommended Image Sizes
-
-| Platform | Size | Notes |
-|----------|------|-------|
-| **Facebook** | 1200 x 630 px | Landscape works best |
-| **Twitter** | 1200 x 630 px | Summary large image card |
-| **Pinterest** | 1000 x 1500 px | Vertical pins perform better |
-| **LinkedIn** | 1200 x 627 px | Similar to Facebook |
-
-**Universal Recommendation:** Create your `share-default.jpg` at **1200 x 630 pixels** for best compatibility across all platforms.
-
-### Test Your Share Preview
-
-After rebuilding and uploading your site, use these tools to verify how your links appear when shared:
-
-| Platform | Testing Tool |
-|----------|--------------|
-| **Facebook** | [Sharing Debugger](https://developers.facebook.com/tools/debug/) |
-| **Twitter** | [Card Validator](https://cards-dev.twitter.com/validator) |
-| **Pinterest** | [Pin Builder](https://developers.pinterest.com/tools/url-debugger/) |
-| **LinkedIn** | [Post Inspector](https://www.linkedin.com/post-inspector/) |
-
-> **⚠️ Important:** These tools **cache images**. If you update your share image, you must click **"Scrape Again"** or **"Clear Cache"** to see the changes.
-
-### Troubleshooting
-
-| Issue | Solution |
-|-------|----------|
-| **Avatar still shows** | Clear platform cache using debugger tools |
-| **No image shows** | Ensure `share-default.jpg` exists in `assets/images/` |
-| **Image looks cropped** | Use recommended 1200x630 size |
-| **Wrong image on old posts** | Rebuild site and clear platform cache |
-
-### Example Workflow
-
-```bash
-# 1. Create your default share image
-# Save as: assets/images/share-default.jpg (1200x630px)
-
-# 2. Rebuild your site
-bundle exec jekyll build
-
-# 3. Upload to your host
-# - Upload all .html files
-# - Upload assets/images/ folder with new image
-
-# 4. Test with Facebook Debugger
-# - Enter your post URL
-# - Click "Scrape Again"
-# - Verify the correct image appears
-```
 ---
 
 ## 🖼️ Featured Images (Left Sidebar)
