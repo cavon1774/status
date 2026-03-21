@@ -38,3 +38,46 @@
 .feed {
     min-width: 0;
 }
+
+/* ============ Theme Switcher Widget ============ */
+.theme-switcher-box {
+    background: var(--card-bg);
+    border: var(--sidebar-card-border);
+    border-radius: var(--sidebar-card-radius);
+    box-shadow: var(--shadow);
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+
+    label {
+        display: block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--meta-color);
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-size: 0.9rem;
+        cursor: pointer;
+        outline: none;
+        font-family: var(--font-main);
+
+        &:focus {
+            border-color: var(--accent-color);
+        }
+    }
+
+    &:hover {
+        box-shadow: var(--shadow-hover);
+    }
+}

@@ -1,4 +1,6 @@
 <aside class="sidebar-right">
+    {% include theme-switcher.html %}
+
     {% assign pinned = site.posts | where: "pin", true | limit: 5 %}
 
     {% if pinned.size > 0 %}
