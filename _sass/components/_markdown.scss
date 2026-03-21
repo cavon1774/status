@@ -1,0 +1,101 @@
+/* ============ Pretty Tables ============ */
+.status-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.status-content table th {
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.status-content table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.status-content table tr:last-child td {
+    border-bottom: none;
+}
+
+.status-content table tr:hover {
+    background: var(--bg-color);
+}
+
+@media (max-width: 600px) {
+    .status-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* ============ Pretty Code Blocks ============ */
+.status-content pre {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 15px;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: var(--shadow);
+}
+
+.status-content code {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.status-content p code,
+.status-content li code {
+    background: var(--bg-color);
+    color: var(--accent-color);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.status-content pre code::before {
+    content: attr(data-language);
+    display: block;
+    background: #333;
+    color: #aaa;
+    padding: 4px 10px;
+    border-radius: 4px 4px 0 0;
+    margin: -15px -15px 10px -15px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============ Blockquotes ============ */
+.status-content blockquote {
+    border-left: 4px solid var(--accent-color);
+    background: var(--bg-color);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    color: var(--meta-color);
+    font-style: italic;
+}
+
+.status-content blockquote p {
+    margin: 0;
+}
+
+/* ============ Horizontal Rule ============ */
+.status-content hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent-color), transparent);
+    margin: 30px 0;
+}

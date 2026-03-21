@@ -1,6 +1,6 @@
 title: "Name this Page"
 description: "Quick updates about DAR Books."
-baseurl: "" 
+baseurl: ""
 url: "https://status.darbooks.com"
 
 # OLD (creates folders):

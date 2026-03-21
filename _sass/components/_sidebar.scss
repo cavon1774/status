@@ -1,0 +1,40 @@
+/* ============ Layout Grid (Desktop) ============ */
+.sidebar-wrapper {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .sidebar-wrapper {
+        display: grid;
+        grid-template-columns: 250px 1fr 250px;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+        display: block;
+    }
+
+    .main-content {
+        min-width: 0;
+    }
+
+    /* Hide old container on desktop */
+    .container {
+        display: none;
+    }
+}
+
+/* ============ Mobile Fallback ============ */
+@media (max-width: 1199px) {
+    .sidebar-wrapper { display: none !important; }
+    .container { display: block !important; }
+}
+
+/* ============ Feed Area ============ */
+.feed {
+    min-width: 0;
+}

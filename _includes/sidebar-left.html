@@ -1,0 +1,10 @@
+<aside class="sidebar-left">
+    {% for item in site.data.featured-images %}
+        <div class="featured-image-card">
+            <a href="{{ item.link }}" target="_blank" rel="noopener">
+                <img src="{{ item.image }}" alt="{{ item.alt }}">
+            </a>
+            <div class="featured-caption">{{ item.alt }}</div>
+        </div>
+    {% endfor %}
+</aside>

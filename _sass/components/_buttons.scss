@@ -1,0 +1,26 @@
+/* ============ Action Buttons ============ */
+.status-actions {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+}
+
+.share-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--meta-color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover {
+        background-color: var(--bg-color);
+        color: var(--accent-color);
+    }
+}
