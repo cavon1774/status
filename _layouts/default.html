@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
+    {% include favicon.html %}
+    {% include css-links.html %}
+    {% include meta.html %}
+    {% include theme-styles.html %}
+
     <script>
         const savedTheme = localStorage.getItem('preferred-theme') || 'dark';
         document.write('<link rel="stylesheet" href="{{ "/assets/themes/" | relative_url }}' + savedTheme + '.css" id="theme-css-preload">');
     </script>
 
-    {% include css-links.html %}
-    {% include meta.html %}
-    {% include theme-styles.html %}
+
 </head>
 <body>
 
