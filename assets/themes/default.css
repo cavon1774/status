@@ -1,7 +1,7 @@
 :root {
     --bg-color: #f0f2f5;
     --card-bg: #ffffff;
-    --text-color: #1c1e21;
+    --text-color: #56739e;
     --meta-color: #65676b;
     --accent-color: #007bff;
     --border-color: #ddd;
@@ -18,4 +18,12 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+.profile-header {
+    border-top: 3px solid var(--accent-color);
+}
+
+.status-card {
+    border-left: 3px solid var(--accent-color);
 }

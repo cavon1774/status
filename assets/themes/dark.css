@@ -20,3 +20,14 @@ body {
     color: var(--text-color);
 }
 
+.profile-header {
+    border-top: 3px solid var(--callout-tip);
+}
+
+.status-card {
+    border-bottom: 3px solid var(--callout-tip);
+}
+
+.pinned-post-card {
+    border-top: 3px solid var(--callout-tip);
+}
