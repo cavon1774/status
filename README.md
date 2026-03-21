@@ -406,6 +406,12 @@ set "fullDate=%YYYY%-%MM%-%DD% %HH%:%Min%:%Sec% -0500"
 
 ---
 
+# Added MORE Theme Variables 
+
+Check out: [README-TEMPLATE](https://github.com/breakthebull/status/blob/main/assets/themes/README-TEMPLATE.md) and [TEMPLATE CSS](https://github.com/breakthebull/status/blob/main/assets/themes/TEMPLATE.css)
+
+---
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
