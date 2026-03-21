@@ -380,6 +380,11 @@ author:
    }
    body { background: var(--bg-color); color: var(--text-color); }
    ```
+### After Editing/Adding Your Theme Activate Using:
+_includes > css-links.html > 
+<link rel="stylesheet" href="{{ '/assets/themes/dark.css' | relative_url }}">
+
+Edit the /assets/themes/new-theme.css line to your new theme.
 
 ---
 
