@@ -1,7 +1,27 @@
-![screenshot](https://github.com/breakthebull/status/blob/main/screenshot.PNG) 
-![screenshot](https://github.com/breakthebull/status/blob/main/status-theme.png)
-![screenshot](https://github.com/breakthebull/status/blob/main/Capture.png)
-![screenshot](https://github.com/breakthebull/status/blob/main/callout-styles.PNG)
+## 🎨 Theme Gallery
+
+| Dark | Light | Ocean |
+|:---:|:---:|:---:|
+| [![Dark](https://github.com/breakthebull/status/raw/main/status-dark.png)](https://github.com/breakthebull/status/raw/main/status-dark.png) | [![Light](https://github.com/breakthebull/status/raw/main/status-light.png)](https://github.com/breakthebull/status/raw/main/status-light.png) | [![Ocean](https://github.com/breakthebull/status/raw/main/status-ocean.png)](https://github.com/breakthebull/status/raw/main/status-ocean.png) |
+
+| Gamer | Cozy | Minimal |
+|:---:|:---:|:---:|
+| [![Gamer](https://github.com/breakthebull/status/raw/main/status-gamer.png)](https://github.com/breakthebull/status/raw/main/status-gamer.png) | [![Cozy](https://github.com/breakthebull/status/raw/main/status-cozy.png)](https://github.com/breakthebull/status/raw/main/status-cozy.png) | [![Minimal](https://github.com/breakthebull/status/raw/main/status-mini.png)](https://github.com/breakthebull/status/raw/main/status-mini.png) |
+
+| Slate |
+|:---:|
+| [![Slate](https://github.com/breakthebull/status/raw/main/status-slate.png)](https://github.com/breakthebull/status/raw/main/status-slate.png) |
+
+---
+
+## 🛠️ Features
+
+| Theme Switcher | Callout Styles | Layout |
+|:---:|:---:|:---:|
+| [![Switcher](https://github.com/breakthebull/status/raw/main/status-theme.png)](https://github.com/breakthebull/status/raw/main/screenshot.PNG) | [![Callouts](https://github.com/breakthebull/status/raw/main/callout-styles.PNG)](https://github.com/breakthebull/status/raw/main/callout-styles.PNG) | [![Layout](https://github.com/breakthebull/status/raw/main/Capture.png)](https://github.com/breakthebull/status/raw/main/Capture.png) |
+
+> 💡 **Tip:** Click any image to view full-size.
+
 ---
 
 # 📝 Status Wall - A Microblog Jekyll Theme
