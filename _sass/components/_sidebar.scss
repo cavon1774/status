@@ -1,11 +1,12 @@
-/* ============ Layout Grid (Desktop) ============ */
-.sidebar-wrapper {
-    display: none;
+/* ============ Layout Grid (Desktop + Tablet) ============ */
+.sidebar-wrapper { 
+    display: none; 
 }
 
-@media (min-width: 1200px) {
+/* Tablet & Desktop (900px+) */
+@media (min-width: 900px) {
     .sidebar-wrapper {
-        display: grid;
+        display: grid !important;
         grid-template-columns: 250px 1fr 250px;
         gap: 30px;
         max-width: 1200px;
@@ -15,23 +16,27 @@
 
     .sidebar-left,
     .sidebar-right {
-        display: block;
+        display: block !important;
     }
 
     .main-content {
-        min-width: 0;
+        min-width: 0 !important;
     }
 
-    /* Hide old container on desktop */
+    /* Hide old container on desktop/tablet */
     .container {
-        display: none;
+        display: none !important;
     }
 }
 
-/* ============ Mobile Fallback ============ */
-@media (max-width: 1199px) {
-    .sidebar-wrapper { display: none !important; }
-    .container { display: block !important; }
+/* Mobile (Below 900px) */
+@media (max-width: 899px) {
+    .sidebar-wrapper { 
+        display: none !important; 
+    }
+    .container { 
+        display: block !important; 
+    }
 }
 
 /* ============ Feed Area ============ */
