@@ -1,3 +1,13 @@
+# 📝 Status Wall - A Psuedo-dynamic Microblog Built With Jekyll
+
+A simple, clean, Facebook-style status wall built with Jekyll. Perfect for sharing quick updates, snippets, and thoughts without the complexity of a traditional blog. Check out the [WIKI](https://github.com/breakthebull/status.wiki.git) for MORE themes. (will update as I go or per request)
+
+![Preview](https://img.shields.io/badge/Jekyll-4.x-red?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
+![Featured](https://img.shields.io/badge/featured%20on-JT-red.svg)
+
+---
+
 ## 🎨 Theme Gallery
 
 | Dark | Light | Ocean |
@@ -21,16 +31,6 @@
 | [![Switcher](https://github.com/breakthebull/status/raw/main/status-theme.png)](https://github.com/breakthebull/status/raw/main/screenshot.PNG) | [![Callouts](https://github.com/breakthebull/status/raw/main/callout-styles.PNG)](https://github.com/breakthebull/status/raw/main/callout-styles.PNG) | [![Layout](https://github.com/breakthebull/status/raw/main/Capture.png)](https://github.com/breakthebull/status/raw/main/Capture.png) |
 
 > 💡 **Tip:** Click any image to view full-size.
-
----
-
-# 📝 Status Wall - A Microblog Jekyll Theme
-
-A simple, clean, Facebook-style status wall built with Jekyll. Perfect for sharing quick updates, snippets, and thoughts without the complexity of a traditional blog. Check out the [WIKI](https://github.com/breakthebull/status.wiki.git) for MORE themes. (will update as I go or per request)
-
-![Preview](https://img.shields.io/badge/Jekyll-4.x-red?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-![Featured](https://img.shields.io/badge/featured%20on-JT-red.svg)
 
 ---
 
