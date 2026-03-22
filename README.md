@@ -8,7 +8,7 @@ A simple, clean, Facebook-style status wall built with Jekyll. Perfect for shari
 
 ---
 
-## 🎨 Theme Gallery
+## Theme Gallery
 
 | Dark | Light | Ocean |
 |:---:|:---:|:---:|
@@ -34,7 +34,7 @@ A simple, clean, Facebook-style status wall built with Jekyll. Perfect for shari
 
 ---
 
-## ✨ Features
+## Features
 
 - 📱 **Responsive Design** - Looks great on mobile and desktop
 - 🖼️ **Image Support** - Add photos to your status updates
@@ -84,7 +84,7 @@ Visit `http://127.0.0.1:4000/` in your browser.
 
 ## 📄 Creating a New Status Post
 
-### Option 1: Using the Batch File (Windows) ⭐ Recommended
+### Option 1: Using the Batch File (Windows) Recommended
 
 **Double-click `new-post.bat`** in the root folder.
 
@@ -114,7 +114,7 @@ Write your status update here...
 
 ---
 
-## 🖼️ Adding Images to Posts
+## Adding Images to Posts
 
 ### 1. Add Your Image
 
@@ -188,7 +188,7 @@ Your post content here...
 
 ---
 
-## 🖼️ Featured Images (Left Sidebar)
+## Featured Images (Left Sidebar)
 
 Display clickable promotional images, book covers, or favorite photos in the left sidebar on desktop screens.
 
@@ -375,7 +375,7 @@ mood: calm
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Profile Information
 
@@ -396,7 +396,7 @@ author:
 
 ---
 
-## 🎨 Quick Theme Tips
+## Quick Theme Tips
 
 ### Create a Custom Theme
 1. Create `assets/themes/your-theme.css`
