@@ -1,0 +1,88 @@
+:root {
+    /* === Base Colors (Cool Blues/Grays) === */
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #1a1a1a;
+    --meta-color: #6c757d;
+    --accent-color: #0d6efd;
+    --border-color: #dee2e6;
+    
+    /* === Shadows & Depth (Structured) === */
+    --shadow: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-hover: 0 8px 16px rgba(13, 110, 253, 0.15);
+    --header-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    --mood-shadow: 0 0 0 2px #e9ecef;
+    
+    /* === Borders & Corners (Clean) === */
+    --card-border-radius: 8px;
+    --sidebar-card-radius: 8px;
+    --card-border: 1px solid #e9ecef;
+    --card-border-hover: 1px solid #0d6efd;
+    --sidebar-card-border: 1px solid #e9ecef;
+    --header-border: 1px solid #e9ecef;
+    --avatar-border: 3px solid #ffffff;
+    
+    /* === Accent Borders === */
+    --post-top-border: 3px solid #0d6efd;
+    --post-left-border: none;
+    --header-accent: 3px solid #0d6efd;
+    
+    /* === Spacing === */
+    --card-padding: 24px;
+    --card-margin: 24px;
+    --sidebar-gap: 30px;
+    
+    /* === Typography === */
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --line-height: 1.6;
+    
+    /* === Links & Buttons === */
+    --link-color: #0d6efd;
+    --link-hover-color: #0a58ca;
+    --link-decoration: none;
+    --link-hover-decoration: underline;
+    
+    --btn-bg: #ffffff;
+    --btn-border: 1px solid #dee2e6;
+    --btn-hover-bg: #0d6efd;
+    --btn-hover-text: #ffffff;
+    
+    /* === Animations === */
+    --transition-speed: 0.2s;
+    --hover-transform: translateY(-2px);
+    
+    /* === Mood === */
+    --mood-size: 10px;
+    
+    /* === Callouts (Professional) === */
+    --callout-note: #0d6efd;
+    --callout-tip: #198754;
+    --callout-warning: #ffc107;
+    --callout-danger: #dc3545;
+    
+    /* === Sidebar === */
+    --sidebar-card-bg: #ffffff;
+    
+    /* === Scrollbar === */
+    --scrollbar-width: 8px;
+    --scrollbar-track: #f8f9fa;
+    --scrollbar-thumb: #0d6efd;
+    --scrollbar-thumb-hover: #0a58ca;
+}
+
+/* Slate Specific Overrides */
+body {
+    background-color: var(--bg-color);
+}
+
+/* Crisp header */
+.profile-header {
+    background: #fff;
+    border-top: 3px solid var(--accent-color);
+}
+
+/* Code blocks match theme */
+.status-content pre {
+    background: #1e1e1e !important;
+    border: 1px solid #333;
+}
