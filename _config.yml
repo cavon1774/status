@@ -1,7 +1,7 @@
 title: "Name this Page"
 description: "Quick updates about DAR Books."
 baseurl: ""
-url: "https://status.darbooks.com"
+url: " https://breakthebull.github.io/status/"
 
 # OLD (creates folders):
 # permalink: /:year-:month-:day-:title/
