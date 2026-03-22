@@ -24,13 +24,11 @@ A simple, clean, Facebook-style status wall built with Jekyll. Perfect for shari
 
 ---
 
-## 🛠️ Features
+## Features
 
 | Theme Switcher | Callout Styles | Layout |
 |:---:|:---:|:---:|
 | [![Switcher](https://github.com/breakthebull/status/raw/main/status-theme.png)](https://github.com/breakthebull/status/raw/main/screenshot.PNG) | [![Callouts](https://github.com/breakthebull/status/raw/main/callout-styles.PNG)](https://github.com/breakthebull/status/raw/main/callout-styles.PNG) | [![Layout](https://github.com/breakthebull/status/raw/main/Capture.png)](https://github.com/breakthebull/status/raw/main/Capture.png) |
-
-> 💡 **Tip:** Click any image to view full-size.
 
 ---
 
@@ -46,7 +44,7 @@ A simple, clean, Facebook-style status wall built with Jekyll. Perfect for shari
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Requirements
 
@@ -334,17 +332,6 @@ pin: false    # ← Change to false or remove this line entirely
 | **Popular Content** | Link to your most popular post |
 | **Contact Info** | How people can reach you |
 | **Current Project** | What you're working on right now |
-
----
-
-## 📱 Responsive Behavior
-
-| Screen Width | Featured Images | Pinned Posts |
-|--------------|-----------------|--------------|
-| **1200px and above** | ✅ Visible (left sidebar) | ✅ Visible (right sidebar) |
-| **Below 1200px** | ❌ Hidden | ❌ Hidden |
-
-On tablets and mobile devices, the sidebars automatically hide to keep the focus on your main feed. This ensures a clean, readable experience on smaller screens.
 
 ---
 
