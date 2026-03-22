@@ -1,0 +1,144 @@
+:root {
+    --bg-color: #18191a;
+    --card-bg: #242526;
+    --text-color: #e4e6eb;
+    --meta-color: #b0b3b8;
+    --accent-color: #2d88ff;
+    --border-color: #3e4042;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3);
+    --shadow-hover: 0 6px 12px rgba(0,0,0,0.5);
+
+    /* Add callout colors */
+    --callout-note: #2d88ff;
+    --callout-tip: #00c853;
+    --callout-warning: #ff9800;
+    --callout-danger: #f44336;
+
+    /* Profile Header */
+    --header-bg: #242526;
+    --header-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    --avatar-border: 3px solid #18191a;
+
+    /* Card Borders */
+    --card-border-radius: 8px;
+    --card-border: none;
+    --card-border-hover: none;
+
+    /* Post-Specific Accents */
+    --post-top-border: none;
+    --post-left-border: none;
+    --post-accent-width: 0px;
+
+    /* Sidebar Cards */
+    --sidebar-card-bg: #242526;
+    --sidebar-card-border: none;
+    --sidebar-card-radius: 8px;
+
+    /* Buttons & Actions */
+    --btn-bg: transparent;
+    --btn-border: 1px solid #3e4042;
+    --btn-hover-bg: #3a3d3f;
+    --btn-hover-text: #2d88ff;
+
+    /* Links */
+    --link-color: #2d88ff;
+    --link-hover-color: #5a9dff;
+    --link-decoration: none;
+    --link-hover-decoration: underline;
+
+    /* Mood Indicators */
+    --mood-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+    --mood-size: 10px;
+
+    /* Typography */
+    --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'Consolas', 'Monaco', monospace;
+    --font-size-base: 16px;
+    --line-height: 1.6;
+
+    /* Spacing */
+    --card-padding: 20px;
+    --card-margin: 20px;
+    --sidebar-gap: 30px;
+
+    /* Animations */
+    --transition-speed: 0.2s;
+    --hover-transform: translateY(-2px);
+
+    /* Callouts (you already have these!) */
+    --callout-note: #2d88ff;
+    --callout-tip: #00c853;
+    --callout-warning: #ff9800;
+    --callout-danger: #f44336;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.profile-header {
+    border-top: 3px solid var(--callout-tip);
+}
+
+.status-card {
+    border-bottom: 3px solid var(--callout-tip);
+}
+
+.pinned-post-card {
+    border-top: 3px solid var(--callout-tip);
+}
+
+/* Add glow to pinned posts
+
+.pinned-post-card {
+    position: relative;
+}
+
+.pinned-post-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(45, 136, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.pinned-post-card:hover::before {
+    opacity: 1;
+}
+
+*/
+
+/* Animate mood indicators */
+.mood-indicator {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Custom scrollbar (Webkit browsers) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--link-hover-color);
+}
