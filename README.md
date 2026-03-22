@@ -292,10 +292,19 @@ Highlight important announcements, welcome messages, or key content in the right
    ```
 
 3. **Rebuild & Upload**
+
+   **Option 1: The Long Way**
    ```bash
    bundle exec jekyll build
    ```
    Upload the updated `_site/` contents to your host.
+
+   **Option 2: The Quick Way** (if hosting your own site)
+   Click the [build.bat](https://github.com/breakthebull/status/blob/main/build.bat)
+   Click the [upload.bat](https://github.com/breakthebull/status/blob/main/upload.bat)
+
+   **Option 3: The Fastest Way** (if hosting your own site)
+   Click the [deploy.bat](https://github.com/breakthebull/status/blob/main/deploy.bat)
 
 ### How Many Posts Show?
 
