@@ -1,7 +1,9 @@
 {% if site.theme_settings.featured_images != false %}
 
 <aside class="sidebar-left">
-    {% for item in site.data.featured-images %}
+    {% assign limit = site.theme_settings.featured_images_limit | default: 2 %}
+
+    {% for item in site.data.featured-images limit: limit %}
         <div class="featured-image-card">
             <a href="{{ item.link }}" target="_blank" rel="noopener">
                 <img src="{{ item.image }}" alt="{{ item.alt }}">
@@ -9,6 +11,10 @@
             <div class="featured-caption">{{ item.alt }}</div>
         </div>
     {% endfor %}
+
+    {% if site.data.featured-images.size == 0 %}
+        <p>No featured images yet.</p>
+    {% endif %}
 </aside>
 
 {% endif %}

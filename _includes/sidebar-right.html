@@ -1,18 +1,20 @@
 {% if site.theme_settings.pinned_posts != false %}
 
 <aside class="sidebar-right">
+    <!-- Theme Switcher Widget -->
     {% include theme-switcher.html %}
 
-    {% assign pinned = site.posts | where: "pin", true | limit: 5 %}
+    {% assign limit = site.theme_settings.pinned_posts_limit | default: 5 %}
+    {% assign pinned = site.posts | where: "pin", true | limit: limit %}
 
     {% if pinned.size > 0 %}
         {% for post in pinned %}
             <div class="pinned-post-card">
                 <div class="pinned-label">📌 Pinned</div>
                 <h3 class="pinned-title">
-                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h3>
-                <div class="pinned-excerpt">{{ post.excerpt }}</div>
+                <div class="pinned-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</div>
             </div>
         {% endfor %}
     {% else %}
