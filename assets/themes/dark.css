@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #18191a;
-    --card-bg: #242526;
-    --text-color: #e4e6eb;
-    --meta-color: #b0b3b8;
-    --accent-color: #2d88ff;
-    --border-color: #3e4042;
+    --bg-color: #0a0a0f;              /* Deep dark background */
+    --card-bg: #12121a;               /* Card background */
+    --text-color: #ffffff;            /* Bright white text */
+    --meta-color: #8888aa;            /* Muted purple-gray */
+    --accent-color: #00ff88;          /* Neon green (primary RGB) */
+    --border-color: #1a1a2e;          /* Dark border */
     --shadow: 0 1px 2px rgba(0,0,0,0.3);
     --shadow-hover: 0 6px 12px rgba(0,0,0,0.5);
 
