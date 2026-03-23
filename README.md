@@ -14,15 +14,15 @@ A simple, clean, Facebook-style status wall built with Jekyll. Perfect for shari
 
 | Dark | Light | Ocean |
 |:---:|:---:|:---:|
-| [![Dark](https://github.com/breakthebull/status/raw/main/status-dark.png)](https://github.com/breakthebull/status/raw/main/status-dark.png) | [![Light](https://github.com/breakthebull/status/raw/main/status-light.png)](https://github.com/breakthebull/status/raw/main/status-light.png) | [![Ocean](https://github.com/breakthebull/status/raw/main/status-ocean.png)](https://github.com/breakthebull/status/raw/main/status-ocean.png) |
+| [![Dark](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-dark.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-dark.png) | [![Light](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-light.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-light.png) | [![Ocean](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-ocean.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-ocean.png) |
 
 | Gamer | Cozy | Minimal |
 |:---:|:---:|:---:|
-| [![Gamer](https://github.com/breakthebull/status/raw/main/status-gamer.png)](https://github.com/breakthebull/status/raw/main/status-gamer.png) | [![Cozy](https://github.com/breakthebull/status/raw/main/status-cozy.png)](https://github.com/breakthebull/status/raw/main/status-cozy.png) | [![Minimal](https://github.com/breakthebull/status/raw/main/status-mini.png)](https://github.com/breakthebull/status/raw/main/status-mini.png) |
+| [![Gamer](https://github.com/breakthebull/status/raw/main/status-gamer.png)](https://github.com/breakthebull/status/raw/main/status-gamer.png) | [![Cozy](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-cozy.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-cozy.png) | [![Minimal](https://github.com/breakthebull/status/raw/main/status-mini.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-mini.png) |
 
 | Slate |
 |:---:|
-| [![Slate](https://github.com/breakthebull/status/raw/main/status-slate.png)](https://github.com/breakthebull/status/raw/main/status-slate.png) |
+| [![Slate](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-slate.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/SCREENSHOTS/status-slate.png) |
 
 ---
 
@@ -30,7 +30,7 @@ A simple, clean, Facebook-style status wall built with Jekyll. Perfect for shari
 
 | Theme Switcher | Callout Styles | Layout |
 |:---:|:---:|:---:|
-| [![Switcher](https://github.com/breakthebull/status/raw/main/status-theme.png)](https://github.com/breakthebull/status/raw/main/screenshot.PNG) | [![Callouts](https://github.com/breakthebull/status/raw/main/callout-styles.PNG)](https://github.com/breakthebull/status/raw/main/callout-styles.PNG) | [![Layout](https://github.com/breakthebull/status/raw/main/Capture.png)](https://github.com/breakthebull/status/raw/main/Capture.png) |
+| [![Switcher](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/status-theme.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/screenshot.PNG) | [![Callouts](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/callout-styles.PNG)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/callout-styles.PNG) | [![Layout](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/Capture.png)](https://github.com/breakthebull/status/raw/main/SCREENSHOTS/Capture.png) |
 
 ---
 
