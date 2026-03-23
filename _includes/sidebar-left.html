@@ -1,3 +1,5 @@
+{% if site.theme_settings.featured_images != false %}
+
 <aside class="sidebar-left">
     {% for item in site.data.featured-images %}
         <div class="featured-image-card">
@@ -8,3 +10,5 @@
         </div>
     {% endfor %}
 </aside>
+
+{% endif %}

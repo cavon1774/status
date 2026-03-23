@@ -17,7 +17,7 @@
 
 
 </head>
-<body>
+<body class="{% if site.theme_settings.featured_images == false %}no-left-sidebar{% endif %}{% if site.theme_settings.pinned_posts == false %} no-right-sidebar{% endif %}{% if site.theme_settings.featured_images == false and site.theme_settings.pinned_posts == false %} no-sidebars{% endif %}">
 
     <!-- ========== DESKTOP LAYOUT (1200px+) ========== -->
     <div class="sidebar-wrapper">

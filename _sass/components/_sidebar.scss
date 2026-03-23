@@ -29,6 +29,58 @@
     }
 }
 
+/* ====== LEFT Sidebar OFF (Featured Images Disabled) ====== */
+body.no-left-sidebar .sidebar-wrapper {
+    grid-template-columns: 1fr 250px !important;
+}
+
+body.no-left-sidebar .sidebar-left {
+    display: none !important;
+}
+
+body.no-left-sidebar .main-content {
+    grid-column: 1 !important;
+}
+
+body.no-left-sidebar .sidebar-right {
+    grid-column: 2 !important;
+}
+
+/* ====== RIGHT Sidebar OFF (Pinned Posts Disabled) ====== */
+body.no-right-sidebar .sidebar-wrapper {
+    grid-template-columns: 250px 1fr !important;
+}
+
+body.no-right-sidebar .sidebar-right {
+    display: none !important;
+}
+
+body.no-right-sidebar .sidebar-left {
+    grid-column: 1 !important;
+}
+
+body.no-right-sidebar .main-content {
+    grid-column: 2 !important;
+}
+
+/* ====== BOTH Sidebars OFF ====== */
+body.no-sidebars .sidebar-wrapper {
+    grid-template-columns: 1fr !important;
+    max-width: 800px !important;
+}
+
+body.no-sidebars .sidebar-left,
+body.no-sidebars .sidebar-right {
+    display: none !important;
+}
+
+body.no-sidebars .main-content {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
 /* Mobile (Below 900px) */
 @media (max-width: 899px) {
     .sidebar-wrapper { 

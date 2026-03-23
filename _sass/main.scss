@@ -1,8 +1,11 @@
+/* ============ BASE ============ */
 @import "base/variables";
 @import "base/general";
 
+/* ============ ANIMATIONS ============ */
 @import "animations/fade";
 
+/* ============ COMPONENTS ============ */
 @import "components/header";
 @import "components/cards";
 @import "components/buttons";
@@ -10,4 +13,5 @@
 @import "components/sidebar";
 @import "components/markdown";
 
+/* ============ PAGES ============ */
 @import "pages/home";

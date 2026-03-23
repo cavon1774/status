@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% if site.theme_settings.mood_indicators != false %}
+
 <article class="status-card single-post">
     <div class="status-meta">
         {% if page.mood %}
@@ -49,3 +51,5 @@ layout: default
         </a>
     </div>
 </article>
+
+{% endif %}
