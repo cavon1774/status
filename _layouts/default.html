@@ -12,10 +12,11 @@
 
     <script>
         const savedTheme = localStorage.getItem('preferred-theme') || 'dark';
-        document.write('<link rel="stylesheet" href="{{ "/assets/themes/" | relative_url }}' + savedTheme + '.css" id="theme-css-preload">');
+        document.write('<link rel="stylesheet" href="{{ "/assets/themes/" | relative_url }}' + savedTheme + '.css" id="theme-css">');
     </script>
 </head>
-<body class="{% if site.theme_settings.featured_images == false %}no-left-sidebar{% endif %}{% if site.theme_settings.pinned_posts == false %} no-right-sidebar{% endif %}{% if site.theme_settings.featured_images == false and site.theme_settings.pinned_posts == false %} no-sidebars{% endif %}">
+
+<body class="no-transition {% if site.theme_settings.featured_images == false %}no-left-sidebar{% endif %}{% if site.theme_settings.pinned_posts == false %} no-right-sidebar{% endif %}{% if site.theme_settings.featured_images == false and site.theme_settings.pinned_posts == false %} no-sidebars{% endif %}"></body>
 
     <!-- ========== DESKTOP LAYOUT (1200px+) ========== -->
     <div class="sidebar-wrapper">
@@ -36,6 +37,8 @@
         <main class="feed">{{ content }}</main>
         {% include footer.html %}
     </div>
+
+    <div class="theme-transition-overlay" id="theme-overlay"></div>
 
 </body>
 </html>

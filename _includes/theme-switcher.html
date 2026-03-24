@@ -14,23 +14,48 @@
 </div>
 
 <script>
-    // 1. Load saved theme on page load (DON'T call switchTheme - keeps layout stable)
+    // 1. Apply theme on page load (no transition)
     document.addEventListener('DOMContentLoaded', () => {
         const savedTheme = localStorage.getItem('preferred-theme') || '{{ site.theme_settings.default_theme | default: "dark" }}';
+
         const select = document.getElementById('theme-select');
         if (select) select.value = savedTheme;
-    });
 
-    // 2. Function to switch theme
-    function switchTheme(themeName) {
-        // Save preference
-        localStorage.setItem('preferred-theme', themeName);
-
-        // Update CSS link
         const themeLink = document.getElementById('theme-css');
         if (themeLink) {
-            themeLink.href = '{{ "/assets/themes/" | relative_url }}' + themeName + '.css';
+            themeLink.href = '{{ "/assets/themes/" | relative_url }}' + savedTheme + '.css';
         }
+
+        setTimeout(() => {
+            document.body.classList.remove('no-transition');
+        }, 100);
+    });
+
+    // 2. Function to switch theme (creates new link element)
+    function switchTheme(themeName) {
+        localStorage.setItem('preferred-theme', themeName);
+
+        const overlay = document.getElementById('theme-overlay');
+        if (overlay) overlay.classList.add('active');
+
+        // Remove old theme link
+        const oldLink = document.getElementById('theme-css');
+        if (oldLink) oldLink.remove();
+
+        // Create new theme link
+        const timestamp = new Date().getTime();
+        const newLink = document.createElement('link');
+        newLink.rel = 'stylesheet';
+        newLink.id = 'theme-css';
+        newLink.href = '{{ "/assets/themes/" | relative_url }}' + themeName + '.css?v=' + timestamp;
+
+        // Add to head
+        document.head.appendChild(newLink);
+
+        // Fade out overlay
+        setTimeout(() => {
+            if (overlay) overlay.classList.remove('active');
+        }, 300);
     }
 </script>
 
